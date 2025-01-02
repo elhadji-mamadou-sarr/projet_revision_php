@@ -24,7 +24,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="nom" class="form-label">Filiére</label>
+                <label for="nom" class="form-label">Filière</label>
                 <select class="form-select" name="sector" aria-label="Default select example">
                     <option value="" <?= empty($etudiant['sector']) ? 'selected' : '' ?>>Sélectionnez une filière</option>
                     <option value="Informatique" <?= $etudiant['sector'] === 'Informatique' ? 'selected' : '' ?>>Informatique</option>

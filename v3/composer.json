@@ -1,0 +1,28 @@
+{
+    "name": "elhadjimamadousarr/v3",
+    "autoload": {
+        "psr-4": {
+            "Elhadjimamadousarr\\V3\\": "src/", 
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "elhadji-mamadou-sarr",
+            "email": "ehm.sarr3@isepdiamniadio.edu.sn"
+        }
+    ],
+    "require": {
+        "symfony/console": "^7.2",
+        "symfony/dotenv": "^7.2",
+        "symfony/twig-bundle": "^7.2",
+        "doctrine/annotations": "^2.0",
+        "symfony/cache": "^7.2",
+        "doctrine/cache": "^2.2",
+        "doctrine/persistence": "^4.0",
+        "doctrine/orm": "^3.3",
+        "doctrine/dbal": "^4",
+        "doctrine/migrations": "^3.8",
+        "jenssegers/blade": "^2.0"
+    }
+}

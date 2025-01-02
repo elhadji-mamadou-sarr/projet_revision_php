@@ -41,8 +41,12 @@
 
         $homeController->home();
 
-
     ?>
+
+
+        <div class="pt-4">
+            <a class="btn btn-outline-primary" href="/" type="submit">Retour à l'accueil</a>
+        </div>
 
 </div>
 

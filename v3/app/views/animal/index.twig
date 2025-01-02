@@ -1,0 +1,40 @@
+
+<div class="d-flex justify-content-between">
+    <h2>Liste des animaux</h2>
+    <div class="btn">
+        <a href="?action=animal.create" class="btn btn-primary">Ajouter un animal</a>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Âge</th>
+            <th>Santé</th>
+            <th>Equipement</th>
+            <th class="text-end">Atcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for animal in animals %}
+            <tr>
+                <td>{{ animal.id}}</td>
+                <td>{{ animal.type }}</td>
+                <td>{{ animal.age }} ans</td>
+                <td>{{ animal.health }}</td>
+                <td>{{ animal.idEquipment ? animal.idEquipment.name : '' }}</td>
+                <td class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a class="btn btn-outline-primary btn-sm" href="?action=animal.edit&id={{animal.id}}">Modifier</a>
+                    <a class="btn btn-outline-danger btn-sm" href="?action=animal.delete&id={{animal.id}}">Supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr> 
+                <td colspan="4" class="">Aucun animal trouvé.</td>
+            <tr>
+        {% endfor %}
+    </tbody>
+</table>
+

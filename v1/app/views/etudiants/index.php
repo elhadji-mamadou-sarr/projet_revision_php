@@ -13,7 +13,7 @@
             <th>Prénom</th>
             <th>Nom</th>
             <th>Email</th>
-            <th>Secteur</th>
+            <th>Filière</th>
             <th class="text-center">Atcion</th>
         </tr>
     </thead>
@@ -25,11 +25,9 @@
                 <td><?= $etudiant['lastname'] ?></td>
                 <td><?= $etudiant['email'] ?></td>
                 <td><?= $etudiant['sector'] ?></td>
-
                 <td class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <a class="btn btn-outline-primary btn-sm" href="?action=etudiant.edit&id=<?= $etudiant['id'] ?>">Modifier</a>
                     <a class="btn btn-outline-danger btn-sm" href="?action=etudiant.delete&id=<?= $etudiant['id'] ?>">Supprimer</a>
-                  
                 </td>
             </tr>
         <?php endwhile; ?>
