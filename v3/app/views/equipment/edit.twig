@@ -1,0 +1,39 @@
+
+<div class="card">
+
+    <div class="card-header">
+        <h2>Modifier un equipement</h2>
+    </div>
+
+    <div class="card-body">
+        <form action="?action=equipment.update" method="POST">
+        
+            <input type="hidden" class="form-control" id="id" name="id" value="{{equipment.id}}">
+
+            <div class="mb-3">
+                <label for="nmae" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{equipment.name}}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="status" class="form-label">Etat</label>
+                <input type="text" class="form-control" id="status" name="status" value="{{equipment.status}}" required>
+            </div>
+
+            <div class="mb-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="availability" 
+                        value="1" {{ equipment.availability ? 'checked' : '' }}>
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Disponibilité</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Modifier</button>
+            <a href="?action=equipment.index" class="btn btn-secondary">Retour</a>
+        </form>
+    </div>
+
+</div>
+
+
+  

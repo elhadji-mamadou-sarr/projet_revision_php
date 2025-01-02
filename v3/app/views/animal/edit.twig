@@ -1,0 +1,47 @@
+
+<div class="card">
+
+    <div class="card-header">
+        <h2>Modifier un animal</h2>
+    </div>
+
+    <div class="card-body">
+        <form action="?action=animal.update" method="POST">
+        
+            <input type="hidden" class="form-control" id="id" name="id" value="{{animal.id}}">
+
+            <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <input type="text" class="form-control" id="type" name="type" value="{{animal.type}}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Âge</label>
+                <input type="number" class="form-control" id="age" name="age" value="{{animal.age}}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="health" class="form-label">Santé</label>
+                <input type="text" class="form-control" id="health" name="health" value="{{animal.health}}" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="idEquipement" class="form-label">Équipement</label>
+                <select class="form-select" id="idEquipement" name="idEquipement" required>
+                    {% for equipment in equipments %}
+                        <option value="{{ equipment.id }}" {% if animal.idEquipement and equipment.id == animal.idEquipement.id %}selected{% endif %}>
+                            {{ equipment.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Modifier</button>
+            <a href="?action=animal.index" class="btn btn-secondary">Retour</a>
+        </form>
+    </div>
+
+</div>
+
+
+  

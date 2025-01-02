@@ -1,0 +1,47 @@
+
+
+
+
+
+<div class="card">
+
+    <div class="card-header">
+        <h2>Ajouter un Animal</h2>
+    </div>
+
+    <div class="card-body">
+        <form action="?action=animal.store" method="POST">
+        
+            <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <input type="text" class="form-control" id="type" name="type" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Âge</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="health" class="form-label">Santé</label>
+                <input type="text" class="form-control" id="health" name="health" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="idEquipement" class="form-label">Équipement</label>
+                <select class="form-select" id="idEquipement" name="idEquipement" required>
+                    {% for equipment in equipments %}
+                        <option value="{{ equipment.id }}">{{ equipment.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+            <a href="?action=animal.index" class="btn btn-secondary">Retour</a>
+        </form>
+    </div>
+
+</div>
+
+
+  
